@@ -50,7 +50,8 @@ impl ::std::fmt::Debug for PangoCairoFontMap {
     }
 }
 
-#[link(name = "pangocairo-1.0")]
+#[cfg_attr(feature = "static", link(name = "pangocairo-1.0", kind = "static"))]
+#[cfg_attr(not(feature = "static"), link(name = "pangocairo-1.0"))]
 extern "C" {
 
     //=========================================================================

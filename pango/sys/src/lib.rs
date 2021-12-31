@@ -1354,7 +1354,8 @@ impl ::std::fmt::Debug for PangoRenderer {
     }
 }
 
-#[link(name = "pango-1.0")]
+#[cfg_attr(feature = "static", link(name = "pango-1.0", kind = "static"))]
+#[cfg_attr(not(feature = "static"), link(name = "pango-1.0"))]
 extern "C" {
 
     //=========================================================================

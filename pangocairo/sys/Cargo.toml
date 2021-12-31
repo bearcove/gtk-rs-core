@@ -22,6 +22,7 @@ tempfile = "3"
 
 [features]
 dox = []
+static = ["glib/static", "pango/static", "cairo/static"]
 
 [lib]
 name = "pango_cairo_sys"

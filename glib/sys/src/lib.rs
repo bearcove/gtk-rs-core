@@ -2411,8 +2411,10 @@ impl ::std::fmt::Debug for GVariantType {
     }
 }
 
-#[link(name = "gobject-2.0")]
-#[link(name = "glib-2.0")]
+#[cfg_attr(feature = "static", link(name = "gobject-2.0", kind = "static"))]
+#[cfg_attr(not(feature = "static"), link(name = "gobject-2.0"))]
+#[cfg_attr(feature = "static", link(name = "glib-2.0", kind = "static"))]
+#[cfg_attr(not(feature = "static"), link(name = "glib-2.0"))]
 extern "C" {
 
     //=========================================================================

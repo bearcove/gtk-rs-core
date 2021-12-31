@@ -1344,7 +1344,8 @@ impl ::std::fmt::Debug for GTypePlugin {
     }
 }
 
-#[link(name = "gobject-2.0")]
+#[cfg_attr(feature = "static", link(name = "gobject-2.0", kind = "static"))]
+#[cfg_attr(not(feature = "static"), link(name = "gobject-2.0"))]
 extern "C" {
 
     //=========================================================================

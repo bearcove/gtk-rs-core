@@ -9169,7 +9169,8 @@ impl ::std::fmt::Debug for GVolume {
     }
 }
 
-#[link(name = "gio-2.0")]
+#[cfg_attr(feature = "static", link(name = "gio-2.0", kind = "static"))]
+#[cfg_attr(not(feature = "static"), link(name = "gio-2.0"))]
 extern "C" {
 
     //=========================================================================

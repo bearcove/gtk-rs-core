@@ -43,6 +43,7 @@ script = []
 xcb = []
 use_glib = ["glib"]
 win32-surface = ["winapi"]
+static = ["glib/static"]
 
 [dependencies]
 libc = "0.2"

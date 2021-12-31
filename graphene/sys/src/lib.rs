@@ -348,7 +348,8 @@ impl ::std::fmt::Debug for graphene_vec4_t {
     }
 }
 
-#[link(name = "graphene-1.0")]
+#[cfg_attr(feature = "static", link(name = "graphene-1.0", kind = "static"))]
+#[cfg_attr(not(feature = "static"), link(name = "graphene-1.0"))]
 extern "C" {
 
     //=========================================================================

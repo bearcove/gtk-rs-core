@@ -26,6 +26,7 @@ v2_36_8 = ["v2_36"]
 v2_40 = ["v2_36_8"]
 dox = []
 v2_42 = ["v2_40"]
+static = ["glib/static", "gobject/static", "gio/static"]
 
 [lib]
 name = "gdk_pixbuf_sys"
