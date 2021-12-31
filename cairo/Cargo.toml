@@ -30,6 +30,7 @@ xcb = ["ffi/xcb"]
 xlib = ["ffi/xlib"]
 dox = ["ffi/dox", "glib/dox", "freetype"]
 win32-surface = ["ffi/win32-surface"]
+static = ["ffi/static"]
 
 [package.metadata.docs.rs]
 features = ["dox"]
